@@ -6,7 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const VERIFY_TOKEN = "Hey Man!!"; // choose any string
-const ACCESS_TOKEN = "EAAyQo0ya3xsBQZCYSWNfDFFURCjZBYNZAxjVL8xD62U70kZCWZAFgkIm3x8hBxPJnbRtfeRJlZCt962Na3BJjEXDIA9hOs58ZCkoF2nCw7b9BEht9r4d5OEiFYOzm3wlxTP1vxYZBrK53mLtB0cuZBM9ZAOEJIWbbPCSx7i55pbivmwnGRujDMG4TcrNIvaXE7ndL37ZAZCftPz9gQIGmHtY60ziZCR8wZBGr3ZAT5fvBiVQZBl3pA0JmJQmsIH5D3lR3PnjttGawzYuabaEDvuZA6m6BUjW46gZDZD"; // from Meta
+const ACCESS_TOKEN = "EAAyQo0ya3xsBQ5YgrAds9PmrVMmsksfKetsyHYZCuXvSvYQhLJBi4jgc7ZAPmwa2aFaBg9ANtkiZCrLRdq79nPmOxzbkU1sr9c6ZCPCM45UKaCIZBCek3PaxZAssmzk199MipEN5UiRK7QIGoZAFinJupInreCvp27DXcK331kIKm9rFw4ZAtMfFrynTxZBkcSfGYPI1ONslyFNhtNJiuYFKBCT3ZB9rPdJbbZB0cTM3vhMRIea5IEwxbxIuQmYbCAJmPSGO0fC5ZBOrvQ8SZBv0LnJfmnwZDZD"; // from Meta
 const PHONE_NUMBER_ID = "912756295264442"; // from Meta
 
 // Webhook verification
@@ -28,7 +28,7 @@ app.post("/webhook", async (req, res) => {
     // Simple rule-based reply (replace with AI later)
     let reply = "Thanks for contacting us!";
     if (msg.toLowerCase().includes("hours")) {
-      reply = "We’re open Mon–Sat, 9 AM to 7 PM.";
+      reply = "Weâ€™re open Monâ€“Sat, 9 AM to 7 PM.";
     }
 
     // Send reply via Cloud API
@@ -46,3 +46,4 @@ app.post("/webhook", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Webhook running on port 3000"));
+
