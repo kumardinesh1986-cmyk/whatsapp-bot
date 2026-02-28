@@ -27,9 +27,10 @@ app.post("/webhook", async (req, res) => {
 
     // Simple rule-based reply (replace with AI later)
     let reply = "Thanks for contacting us!";
-    if (msg.toLowerCase().includes("hours")) {
-      reply = "We’re open Mon–Sat, 9 AM to 7 PM.";
-    }
+    if (msg.toLowerCase().includes("hours")) { reply = "We’re open Mon–Sat, 9 AM to 7 PM."; }
+    if (msg.toLowerCase().includes("location")) { reply = "📍 We’re located at XYZ Street, Pune."; }
+    if (msg.toLowerCase().includes("price")) { reply = "💰 Our prices start at ₹499. Would you like a full catalog?"; }
+    if (msg.toLowerCase().includes("delivery")) { reply = "🚚 Yes, we deliver across Pune. Free delivery on orders above ₹1000.";}
 
     // Send reply via Cloud API
     await axios.post(
@@ -46,5 +47,6 @@ app.post("/webhook", async (req, res) => {
 });
 
 app.listen(3000, () => console.log("Webhook running on port 3000"));
+
 
 
